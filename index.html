@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Contour Detection</title>
+	<style>
+		.float-div::after {
+			content: "";
+			clear: both;
+			display:block;
+		}
+		canvas{
+			border: solid 1px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div>
+		<!-- スライダー -->
+		<div class="float-div" style="margin: 10px;">
+			<div style="width: 400px; float: left;">
+				<p>二値化の閾値: <span id="imgThresioldSpan"></span></p>
+				<div id="imgThresioldSlider" style="width: 300px;"></div>
+			</div>
+			<div style="width: 400px; float: left; display: none;">
+				<p>オープニングの反復数: <span id="openningItrSpan"></span></p>
+				<div id="openningItrSlider" style="width: 100px;"></div>
+			</div>
+		</div>
+		<!-- 説明文 -->
+		<div>
+			左上から順に、入力、グレースケール化、二値化、輪郭追跡
+		</div>
+		<div style="width:1000px;">
+			<!-- キャンバス -->
+			<!-- 入力 -->
+			<canvas></canvas>
+			<!-- グレースケール -->
+			<canvas></canvas>
+			<!-- 二値化 -->
+			<canvas></canvas>
+			<!-- オープニング -->
+			<canvas style="display:none;"></canvas>
+			<!-- 輪郭追跡 -->
+			<canvas></canvas>
+		</div>
+		<div>
+			<p>画像は<a href="http://pronama.azurewebsites.net/pronama/download/">プロ生ちゃん</a></p>
+		</div>
+	</div>
+	<footer style="text-align: center;">
+		<a href="http://www.sasekazu.info">sasekazu.info</a>
+	</footer>
+</body>
+</html>
