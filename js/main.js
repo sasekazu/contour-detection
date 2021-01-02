@@ -1,5 +1,5 @@
 // JavaScript Document
-/// <reference path="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" />
+/// <reference path="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" />
 
 $(document).ready(function () {
 
